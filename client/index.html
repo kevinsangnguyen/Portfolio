@@ -1,6 +1,8 @@
 <html ng-app="board">
 <head>
 	<title>Kevin Sang Nguyen</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="./images/gsw.ico">
 	<!-- require angular -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
@@ -81,10 +83,10 @@
 
 <body scroll-hide ng-controller="Main">
 
-<nav class="navbar navbar-light navbar-fixed-top animated fadeIn" ng-class="{navtop: current_section == 'top', navabout: current_section == 'about', navskills: current_section=='skills', navprojects: current_section == 'projects'}" ng-hide='start' role='navigation'>
+<nav class="navbar navbar-fixed-top animated fadeIn" ng-class="{navtop: current_section == 'top', navabout: current_section == 'about', navskills: current_section=='skills', navprojects: current_section == 'projects'}" ng-hide='start' role='navigation'>
   <div class="navbar-header">
       <h4 class="pull-left brand" style="margin-left:10px">Kevin Sang Nguyen</h4>
-      <button type="button" class="btn btn-default navbar-toggle brand" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+      <button type="button" class="btn btn-default navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
               <span class="glyphicon glyphicon-menu-hamburger"></span>
                 <span class="sr-only">Toggle navigation</span>
     </button>

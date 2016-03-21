@@ -15,7 +15,6 @@ nav{
 	top:0;
 	right:0;
 	position:fixed;
-	height:3%;
 	color:#0146AD;
 	padding-right: 1%;
 }
@@ -44,7 +43,10 @@ nav .brand{
 
 .navabout {
 	background-color: #FEC601;
-	opacity:.99;
+}
+
+.navabout ul li{
+	background-color: #FEC601;
 }
 
 .navabout .brand {
