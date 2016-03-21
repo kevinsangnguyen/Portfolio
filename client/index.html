@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<!doctype html>
 <html ng-app="board">
 <head>
-	<meta name="viewport" content="initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 	<title>Kevin Sang Nguyen</title>
 	<meta charset="utf-8">
 	<link rel="icon" href="./images/gsw.ico">
@@ -80,35 +80,33 @@
 
 </head>
 
-<nav class="navbar navbar-fixed-top animated fadeIn" ng-class="{navtop: current_section == 'top', navabout: current_section == 'about', navskills: current_section=='skills', navprojects: current_section == 'projects'}" ng-hide='start' role='navigation'>
-  <div class="navbar-header">
-      <h4 class="pull-left brand" style="margin-left:10px">Kevin Sang Nguyen</h4>
-      <button type="button" class="btn btn-default navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
-              <span class="glyphicon glyphicon-menu-hamburger"></span>
-                <span class="sr-only">Toggle navigation</span>
-    </button>
-  </div>
-  <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
-    <ul class="nav navbar-nav navbar-right" style="text-align:right">
-        <li uib-dropdown ng-click="scroll_to('top')">
-          <a class= "nav-item hvr-push" ng-class="{active: current_section== 'top'}">Top</a>
-        </li>
-        <li uib-dropdown="" ng-click="scroll_to('about')" class= "nav-item" >
-          <a class="hvr-push" ng-class="{active: current_section== 'about'}">Bio</a>
-        </li>
-        <li uib-dropdown="" ng-click="scroll_to('skills')" class="nav-item" >
-          <a class="hvr-push" ng-class="{active: current_section== 'skills'}">Skills</a>
-        </li>
-        <li uib-dropdown ng-click="scroll_to('projects')" class="nav-item" >
-          <a class="hvr-push" ng-class="{active: current_section== 'projects'}">Projects</a>
-        </li>
-    </ul>
-  </div>
-</nav>
 
 <body scroll-hide ng-controller="Main">
-
-
+	<nav class="navbar navbar-fixed-top animated fadeIn" ng-class="{navtop: current_section == 'top', navabout: current_section == 'about', navskills: current_section=='skills', navprojects: current_section == 'projects'}" ng-hide='start' role='navigation'>
+	  <div class="navbar-header">
+	      <h4 class="pull-left brand" style="margin-left:10px">Kevin Sang Nguyen</h4>
+	      <button type="button" class="btn btn-default navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+	              <span class="glyphicon glyphicon-menu-hamburger"></span>
+	                <span class="sr-only">Toggle navigation</span>
+	    </button>
+	  </div>
+	  <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
+	    <ul class="nav navbar-nav navbar-right" style="text-align:right">
+	        <li uib-dropdown ng-click="scroll_to('top')">
+	          <a class= "nav-item hvr-push" ng-class="{active: current_section== 'top'}">Top</a>
+	        </li>
+	        <li uib-dropdown="" ng-click="scroll_to('about')" class= "nav-item" >
+	          <a class="hvr-push" ng-class="{active: current_section== 'about'}">Bio</a>
+	        </li>
+	        <li uib-dropdown="" ng-click="scroll_to('skills')" class="nav-item" >
+	          <a class="hvr-push" ng-class="{active: current_section== 'skills'}">Skills</a>
+	        </li>
+	        <li uib-dropdown ng-click="scroll_to('projects')" class="nav-item" >
+	          <a class="hvr-push" ng-class="{active: current_section== 'projects'}">Projects</a>
+	        </li>
+	    </ul>
+	  </div>
+	</nav>
 
 <header id="top">
   <div id="header-background">
