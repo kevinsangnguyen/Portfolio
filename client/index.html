@@ -10,7 +10,6 @@
 	<link rel="icon" href="./images/gsw.ico">
 	<!-- require angular -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.js"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.1.2/ui-bootstrap-tpls.js'>
 	</script>
@@ -21,7 +20,7 @@
   <script src="./bower_components/ui-navbar/release/js/ui-navbar.js"></script>
 	<script type='text/javascript'>
 
-	var board = angular.module('board', ['ngRoute','ui.bootstrap','ngAnimate','duScroll','ui.navbar']).value('duScrollDuration', 2250);
+	var board = angular.module('board', ['ui.bootstrap','ngAnimate','duScroll','ui.navbar']).value('duScrollDuration', 2250);
 
 
   board.directive("scrollHide", function ($window) {
