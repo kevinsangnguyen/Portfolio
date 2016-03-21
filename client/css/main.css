@@ -225,7 +225,8 @@ header {
 }
 
 #pic-container{
-	height:auto width:auto;
+	height:auto;
+	width:auto;
 	display:inline;
 }
 
