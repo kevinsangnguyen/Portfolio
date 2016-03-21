@@ -1,0 +1,294 @@
+<html ng-app="board">
+<head>
+	<title>Kevin Sang Nguyen</title>
+	<link rel="icon" href="./images/gsw.ico">
+	<!-- require angular -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.1.2/ui-bootstrap-tpls.js'>
+	</script>
+  <script src="./bower_components/angular-scroll/angular-scroll.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="./bower_components/ui-navbar/css/ui-navbar.css"></script>
+  <script src="./bower_components/ui-navbar/release/js/ui-navbar.js"></script>
+	<script type='text/javascript'>
+
+	var board = angular.module('board', ['ngRoute','ui.bootstrap','ngAnimate','duScroll','ui.navbar']).value('duScrollDuration', 2250);
+
+
+  board.directive("scrollHide", function ($window) {
+   return function(scope, element, attrs) {
+       angular.element($window).bind("scroll", function() {
+            if (this.scrollY >= $window.innerHeight) {
+                scope.start = false;
+            } else {
+                // scope.start = true;
+            }
+
+            if(this.scrollY >= $window.innerHeight/2){
+              scope.show_about = true;
+            }
+
+            if(this.scrollY >= $window.innerHeight * 1.5){
+              scope.show_skills = true;
+            }
+
+            if(this.scrollY >= $window.innerHeight * 2.15){
+              scope.show_projects1 = true;
+            }
+
+            if(this.scrollY >= $window.innerHeight * 2.25){
+              scope.show_projects2 = true;
+            }
+
+            if(this.scrollY <= $window.innerHeight){
+              scope.current_section = 'top';
+            }
+
+            if(this.scrollY >= $window.innerHeight && this.scrollY <= ($window.innerHeight * 2))
+            {
+              scope.current_section = 'about';
+            }
+
+            if(this.scrollY >= ($window.innerHeight * 2) && this.scrollY <= ($window.innerHeight * 2.75))
+            {
+              scope.current_section = 'skills';
+            }
+
+            if(this.scrollY >= ($window.innerHeight * 2.75) && this.scrollY <= ($window.innerHeight * 3.75))
+            {
+              scope.current_section = 'projects';
+            }
+
+
+           scope.$apply();
+       });
+   };
+  });
+
+	</script>
+  <script type="text/javascript" src="./controllers/main.js"></script>
+   <link rel="stylesheet" href="./css/animate.css">
+	 <link href="./css/hover.css" rel="stylesheet" media="all">
+  <link rel="stylesheet" href="./css/main.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+</head>
+
+
+
+<body scroll-hide ng-controller="Main">
+
+<nav class="navbar navbar-light navbar-fixed-top animated fadeIn" ng-class="{navtop: current_section == 'top', navabout: current_section == 'about', navskills: current_section=='skills', navprojects: current_section == 'projects'}" ng-hide='start' role='navigation'>
+  <div class="navbar-header">
+      <h4 class="pull-left brand" style="margin-left:10px">Kevin Sang Nguyen</h4>
+      <button type="button" class="btn btn-default navbar-toggle brand" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+              <span class="glyphicon glyphicon-menu-hamburger"></span>
+                <span class="sr-only">Toggle navigation</span>
+    </button>
+  </div>
+  <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
+    <ul class="nav navbar-nav navbar-right" style="text-align:right">
+        <li uib-dropdown ng-click="scroll_to('top')">
+          <a class= "nav-item hvr-push" ng-class="{active: current_section== 'top'}">Top</a>
+        </li>
+        <li uib-dropdown="" ng-click="scroll_to('about')" class= "nav-item" >
+          <a class="hvr-push" ng-class="{active: current_section== 'about'}">Bio</a>
+        </li>
+        <li uib-dropdown="" ng-click="scroll_to('skills')" class="nav-item" >
+          <a class="hvr-push" ng-class="{active: current_section== 'skills'}">Skills</a>
+        </li>
+        <li uib-dropdown ng-click="scroll_to('projects')" class="nav-item" >
+          <a class="hvr-push" ng-class="{active: current_section== 'projects'}">Projects</a>
+        </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<header id="top">
+  <div id="header-background">
+	</div>
+	<div id="large-header"><canvas id="sectionOne"></canvas></div>
+  <div id="name">
+    <h1 class="animated fadeInRight" id="banner">Kevin Sang Nguyen</h1>
+    <hr class="animated fadeIn" id="line">
+    <h2 class="animated fadeInLeft" id="bottombanner">Full Stack Developer</h2>
+  </div>
+  <a href="#about" id="arrow" class="animated fadeInDown" du-smooth-scroll du-scrollspy><i class="glyphicon glyphicon-chevron-down hvr-sink"></i></a>
+</header>
+
+<section id="about">
+  <div id="about-background"></div>
+  <div class="row" id="aboutme" ng-if="show_about">
+    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 animated fadeInUp" id="pic-container" >
+      <img class="img-responsive" id="profile-pic" src="/images/headshot.jpg">
+			<div class="contact">
+				<h2><span class="yellow">Contact Me</span></h2>
+				<h5>kevinsangnguyen@gmail.com</h5>
+				<a class="hvr-float-shadow" href="mailto:kevinsangnguyen@gmail.com"><img src="./images/gmail.png"></a>
+				<a class="hvr-float-shadow" target = "_blank" href="http://github.com/kevinsangnguyen"><img src="./images/github.png" /></a>
+				<a class="hvr-float-shadow" target = "_blank" href="https://www.linkedin.com/in/kevinsangnguyen"><img src="./images/linkedin.png" /></a>
+			</div>
+
+    </div>
+
+    <div class="col-md-offset-1 col-md-5 col-lg-5 col-sm-12 col-xs-12">
+      <h1 id="hello"class="animated fadeInRight"><i>Hello,</i></h1>
+      <br>
+      <div class="animated fadeIn" id="about-info">
+        <p>&nbsp;&nbsp;&nbsp;My name is <span class="yellow">Kevin</span> and I am a <strong><span class="yellow">Full Stack Web Developer</span></strong>.</p>
+				<p> For the past few months, I have fully immersed myself in my new passion that I have found during my stint in college, <span class="yellow">coding</span>. As an enthusiast for <span class="yellow">math</span> and <span class="yellow">problem solving</span>, I had a gut feeling that coding would be my calling. After attending a few computer science classes, I believed that I was right. I followed up by applying for a intensive on-site coding boot camp after receiving my Bachelor of Science in Biological Sciences at the University of California, <span class="yellow">Santa Barbara</span>. I have spent roughly <span class="yellow">70+ hours/week learning, researching, discovering and grinding</span> out anything about coding. The things I <span class="yellow">love</span> about it are, there is always something to <span class="yellow">learn</span> and there is always something for you to <span class="yellow">solve</span>.
+				</p>
+				<p>
+					As for specialties, I specialize in anything <span class="yellow">JavaScript</span>, front or back. My other skills can be found in the skills section, but I believe I am just as proficient in <span class="yellow">Python</span> and <span class="yellow">PHP</span> as I am in JavaScript. I want to learn as much as possible while taking on new challenges during my career.
+				</p>
+				<p>Also, if you didn't notice, I am definitely a fan of basketball and the <span class="yellow"><u>Golden State Warriors</u></span>.
+				</p>
+      </div>
+    </div>
+
+		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+			<img class="img-responsive personal" src="./images/team.jpg">
+			<img class="img-responsive personal" src="./images/kendrick.jpg">
+			<img class="img-responsive personal" src="./images/squirtle.gif">
+		</div>
+  </div>
+</section>
+
+<section id="skills">
+  <div id="skills-background"></div>
+  <div class="row" id="skills-info" ng-if="show_skills">
+    <div class="col-md-12 animated fadeIn">
+      <h1 style="font-size:50px"><i>Skills</i></h1>
+      <hr class="skills-hr">
+    </div>
+    <div class="animated fadeIn" id="skills_pics">
+      <div class="row">
+        <div class="col-md-12 col-sm-6">
+          <img src="./images/htmlcss.png">
+          <img src="./images/jquery.png">
+          <img src="./images/ajax.png">
+          <img src="./images/mysql.png">
+          <img src="./images/php-lamp.png">
+          <img src="./images/codeigniter-lamp.png">
+      </div>
+      <div class="row">
+      <img src="./images/bootstrap.png">
+      <img src="./images/python-programming.png">
+      <img src="./images/flask-python.png">
+      <img src="./images/django-framework.png">
+      </div>
+    <div class="row">
+      <img  src="./images/mongo-db.png">
+      <img  src="./images/express-js.png">
+      <img  src="./images/angular-js.png">
+      <img  src="./images/node-js.png">
+      <img  src="./images/socketio.png">
+			<img  src="./images/react.png">
+
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div id="projects-background"></div>
+  <div class="container" id="projects-info">
+
+    <div class="animated fadeIn" id = "projects-header" ng-if="show_projects1">
+      <h1 style="text-align: center; margin-bottom:5%; font-size:50px;"><i>Work</i></h1>
+    </div>
+
+  <div class="container animated fadeIn" id="projects-info-box" ng-if="show_projects2">
+
+			<div class="row animated fadeIn" id="project1">
+          <div class="col-md-6 col-lg-6 col-s-12 col-xs-12">
+            <h1 class="project-title">InstaLoud</h1>
+            <p class="project-description">A social media website with the simplicity to <span class="white">share music</span> from <span class="white">SoundCloud</span> to friends and family.</p>
+            <p>
+               Technologies: <span class="white">Python</span>, <span class="white">SQLite3</span>, <span class="white">Django</span>, <span class="white">jQuery</span>, <span class="white">AJAX</span>, <span class="white">MaterializeCSS</span>.
+            </p>
+          </div>
+
+						<div class="col-lg-6 col-md-6 col-s-12 col-xs-12">
+								<div class="hovereffect img-responsive pull-right" style="margin-right:10px;">
+										<img class="website" src="./images/instaloud.png" style="border-radius: 20px 5px 20px 5px;">
+												<div class="overlay">
+													<h3 style="margin-top: 100px">
+														<a target = "_blank" href="http://instaloud.kevinsangnguyen.com"><span class="glyphicon glyphicon-play-circle"></span>LIVE DEMO</a>
+														&nbsp;&nbsp;&nbsp;
+														<a target = "_blank" href="http://github.com/kevinsangnguyen/instaloud"><span class="glyphicon glyphicon-floppy-disk"></span>GITHUB </a>
+													</h3>
+												</div>
+								</div>
+					</div>
+			</div>
+			<!-- 2 -->
+      <div class="row animated fadeIn"id="project2" style="margin-top:50px">
+
+          <div class="col-lg-6 col-md-6 col-s-12 col-xs-12">
+              <div class="hovereffect img-responsive pull-left">
+                  <img class="website" src="./images/rsz_pokemon.png">
+                      <div class="overlay">
+                        <h3 style="margin-top: 100px">
+                          <a target = "_blank" href="http://pokemon.kevinsangnguyen.com"><span class="glyphicon glyphicon-play-circle"></span>LIVE DEMO</a>
+                          &nbsp;&nbsp;&nbsp;
+                          <a target = "_blank" href="http://github.com/kevinsangnguyen/pokemon_game"><span class="glyphicon glyphicon-floppy-disk"></span>GITHUB </a>
+                        </h3>
+                      </div>
+              </div>
+          </div>
+
+        <div class="col-md-5 col-lg-5 col-s-12 col-xs-12 pull-right">
+            <h1 class="project-title">Pokemon Socket Simulation</h1>
+            <p class="project-description">A <span class="white">multiplayer(2)</span> javascript built game that mimics the functionality of the original Pokemon game while utilizing <span class="white">sockets</span>.</p>
+            <p>
+              Technologies: <span class="white">JavaScript</span>, <span class="white">MongoDB</span>, <span class="white">Express.js</span>, <span class="white">Angular.js</span>, <span class="white">Node.js</span>, <span class="white">Bootstrap</span>, <span class="white">Sockets.io</span>.
+            </p>
+        </div>
+      </div>
+
+			<!-- 3 -->
+			<div class="row animated fadeIn" id="project3" style="margin-top:50px; padding-bottom:25px;">
+					<div class="col-md-6 col-lg-6 col-s-12 col-xs-12">
+						<h1 class="project-title">Stay on Course</h1>
+						<p class="project-description">A <span class="white">job searching organizer</span> with the ability to <span class="white">drag</span> and <span class="white">drop</span> sticky notes or job postings.</p>
+						<p>
+							 Technologies: <span class="white">MongoDB</span>, <span class="white">Express.js</span>, <span class="white">AngularJS</span>, <span class="white">Node.js</span>, <span class="white">passport</span>.
+						</p>
+					</div>
+
+			<div class="col-lg-6 col-md-6 col-s-12 col-xs-12">
+							<div class="hovereffect img-responsive pull-right" style="margin-right:10px;">
+									<img class="website" src="./images/stayoncourse.png" style="border-radius: 20px 5px 20px 5px;">
+											<div class="overlay">
+												<h3 style="margin-top: 100px">
+													<a target = "_blank"  href="http://stayoncourse.kevinsangnguyen.com"><span class="glyphicon glyphicon-play-circle"></span>LIVE DEMO</a>
+													&nbsp;&nbsp;&nbsp;
+													<a target = "_blank" href="http://github.com/kevinsangnguyen/stayoncourse"><span class="glyphicon glyphicon-floppy-disk"></span>GITHUB </a>
+												</h3>
+											</div>
+							</div>
+				</div>
+			</div>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- Special Effects starlines -->
+	<script src="./js/TweenLite.min.js"></script>
+	<script src="./js/EasePack.min.js"></script>
+	<script src="./js/rAF.js"></script>
+	<script src="./js/starLine.js"></script>
+
+</body>
+</html>
