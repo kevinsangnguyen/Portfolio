@@ -3,18 +3,14 @@
 <head>
 	<meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
   <meta name="author" content="">
 	<title>Kevin Sang Nguyen</title>
 	<link rel="icon" href="./images/gsw.ico">
-	<script type="text/javascript" src="./controllers/main.js"></script>
-	 <link rel="stylesheet" href="./css/animate.css">
-	 <link href="./css/hover.css" rel="stylesheet" media="all">
-	<link rel="stylesheet" href="./css/main.css">
-	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,400italic,600,600italic' rel='stylesheet' type='text/css'>
 	<!-- require angular -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.js"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.1.2/ui-bootstrap-tpls.js'>
 	</script>
@@ -25,7 +21,7 @@
   <script src="./bower_components/ui-navbar/release/js/ui-navbar.js"></script>
 	<script type='text/javascript'>
 
-	var board = angular.module('board', ['ui.bootstrap','ngAnimate','duScroll','ui.navbar']).value('duScrollDuration', 2250);
+	var board = angular.module('board', ['ngRoute','ui.bootstrap','ngAnimate','duScroll','ui.navbar']).value('duScrollDuration', 2250);
 
 
   board.directive("scrollHide", function ($window) {
@@ -79,6 +75,11 @@
   });
 
 	</script>
+  <script type="text/javascript" src="./controllers/main.js"></script>
+   <link rel="stylesheet" href="./css/animate.css">
+	 <link href="./css/hover.css" rel="stylesheet" media="all">
+  <link rel="stylesheet" href="./css/main.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,400italic,600,600italic' rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -112,9 +113,9 @@
 	</nav>
 
 <header id="top">
+	<div id="large-header"><canvas id="sectionOne"></canvas></div>
   <div id="header-background">
 	</div>
-	<div id="large-header"><canvas id="sectionOne"></canvas></div>
   <div id="name">
     <h1 class="animated fadeInRight" id="banner">Kevin Sang Nguyen</h1>
     <hr class="animated fadeIn" id="line">
