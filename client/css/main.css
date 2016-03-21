@@ -131,13 +131,6 @@ header {
 	position:relative;
 }
 
-.large-header{
-	height:100vh;
-	width:100%;
-	overflow:hidden;
-	z-index:1;
-}
-
 #sectionOne{
 	height:100vh;
 	width:100%;
