@@ -2,6 +2,11 @@
   width: device-width;
 }
 
+@viewport{
+    zoom: 1.0;
+    width: device-width;
+}
+
 body {
 	background-image: url('../images/background.jpg');
     background-repeat: no-repeat;
