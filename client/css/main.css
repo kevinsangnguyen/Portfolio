@@ -1,5 +1,6 @@
 @-ms-viewport{
 	width:device-width;
+	height:device-height;
 }
 body {
 	background-image: url('../images/background.jpg');
