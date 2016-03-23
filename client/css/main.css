@@ -232,9 +232,14 @@ header {
 }
 
 #pic-container{
+	top: 10%;
 	height:auto;
 	width:auto;
 	display:inline;
+}
+
+.personal_pics{
+	top:5%;
 }
 
 #profile-pic{
