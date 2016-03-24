@@ -220,7 +220,7 @@ header {
 }
 
 #aboutme {
-	overflow:auto;
+	overflow-y:auto;
 	color:#fafafa;
 	position: absolute;
 	top: 50%;
@@ -348,9 +348,9 @@ header {
   	border-width: 1.85px 0;
 }
 #skills_pics{
-	-webkit-animation-duration: 1.5s;
+	-webkit-animation-duration: 0.5s;
 	-webkit-animation-delay: 1.1s;
-	animation-duration: 1.5s;
+	animation-duration: 0.5s;
 	animation-delay: 1.1s;
 	height:auto;
 	width:80%;
@@ -401,9 +401,9 @@ header {
 	background: rgba(0, 194, 157,.80);
 	position:absolute;
 	border: 3px solid #FFFFFF;
-	-webkit-animation-duration: 2s;
+	-webkit-animation-duration: 1s;
 	-webkit-animation-delay: 1.1s;
-	animation-duration: 2s;
+	animation-duration: 1s;
 	animation-delay: 1.1s;
 }
 
@@ -444,31 +444,31 @@ header {
 }
 
 #projects-header{
-	-webkit-animation-duration: 1.5s;
+	-webkit-animation-duration: 1s;
 	-webkit-animation-delay: 1.1s;
-	animation-duration: 1.5s;
+	animation-duration: 1s;
 	animation-delay: 1.1s;
 }
 
 #project1{
-	-webkit-animation-duration: 1.5s;
-	-webkit-animation-delay: 2.5s;
-	animation-duration: 1.5s;
-	animation-delay: 2.5s;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-delay: 2s;
+	animation-duration: 1s;
+	animation-delay: 2s;
 }
 
 #project2{
-	-webkit-animation-duration: 1.5s;
+	-webkit-animation-duration: 1s;
 	-webkit-animation-delay: 3.5s;
-	animation-duration: 1.5s;
-	animation-delay: 3.5s;
+	animation-duration: 1s;
+	animation-delay: 3s;
 }
 
 #project3{
-	-webkit-animation-duration: 1.5s;
-	-webkit-animation-delay: 4.5s;
-	animation-duration: 1.5s;
-	animation-delay: 4.5s;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-delay: 4s;
+	animation-duration: 1s;
+	animation-delay: 4s;
 }
 
 .hovereffect {
