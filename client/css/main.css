@@ -299,9 +299,9 @@ header {
 
 #about-info {
 	-webkit-animation-duration: 1s;
-	-webkit-animation-delay: 2s;
+	-webkit-animation-delay: 1s;
 	animation-duration: 1s;
-	animation-delay: 2s;
+	animation-delay: 1s;
 	font-size: 105%;
 
 }
@@ -483,9 +483,9 @@ header {
 .hovereffect .overlay {
   position: absolute;
   overflow: hidden;
-  width: 100%;
+  width: 90%;
   height: 50%;
-  left: 0;
+  left: 5%;
   top: 20%;
   border-bottom: 1px solid #FFF;
   border-top: 1px solid #FFF;

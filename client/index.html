@@ -33,13 +33,30 @@
                 // scope.start = true;
             }
 
+
             if(this.scrollY >= $window.innerHeight/2){
               scope.show_about = true;
             }
 
+						if(this.scrollY <= $window.innerHeight/2 || this.scrollY >= $window.innerHeight * 1.5){
+							scope.about_fadeout = true;
+						}
+						else{
+							scope.about_fadeout = false;
+						}
+
             if(this.scrollY >= $window.innerHeight * 1.5){
               scope.show_skills = true;
             }
+
+						if(this.scrollY <= $window.innerHeight * 1.5 || this.scrollY >= $window.innerHeight * 2.5){
+							scope.skills_fadeout = true;
+						}
+						else{
+							scope.skills_fadeout = false;
+						}
+
+
 
             if(this.scrollY >= $window.innerHeight * 2.15){
               scope.show_projects1 = true;
@@ -127,7 +144,8 @@
 <section id="about">
   <div id="about-background"></div>
   <div class="row" id="aboutme" ng-if="show_about">
-    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 animated fadeInUp" id="pic-container" >
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 animated fadeInUp" id="pic-container"
+		ng-class="{fadeOut: about_fadeout}">
       <img class="img-responsive" id="profile-pic" src="/images/headshot.jpg">
 			<div class="contact">
 				<h2><span class="yellow">Contact Me</span></h2>
@@ -142,9 +160,9 @@
     </div>
 
     <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12">
-      <h1 id="hello"class="animated fadeInRight"><i>Hello,</i></h1>
+      <h1 id="hello"class="animated fadeInRight" ng-class="{fadeOut: about_fadeout}"><i>Hello,</i></h1>
       <br>
-      <div class="animated fadeIn" id="about-info">
+      <div class="animated fadeIn" id="about-info" ng-class="{fadeOut: about_fadeout}">
         <p>My name is <span class="yellow">Kevin</span> and I am a <strong><span class="yellow">Full Stack Web Developer</span></strong>.</p>
 				<p> During these past months, I have dedicated myself towards new passion: <span class="yellow">coding</span>. As an enthusiast for <span class="yellow">math</span> and <span class="yellow">problem solving</span>, I had a gut feeling that coding would be my calling. My intuition was right, which was evident to me after completing a few computer science courses during college. I followed up on this by applying for a intensive on-site coding boot camp after receiving my Bachelor of Science in Biological Sciences at the University of California, <span class="yellow">Santa Barbara</span> last spring of 2015. Since then, I have spent roughly <span class="yellow">70+ hours/week learning, researching, discovering and grinding</span> out anything I can about coding. What I <span class="yellow">love</span> about it the most is that there are endless things to <span class="yellow">learn</span> and never a scarcity of problems to tackle and <span class="yellow">solve</span>.
 				</p>
@@ -156,7 +174,7 @@
       </div>
     </div>
 
-		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 animated fadeInUp personal_pics">
+		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 animated fadeInUp personal_pics" ng-class="{fadeOut: about_fadeout}">
 			<div id="dubs" class="personal" src="./images/team.jpg"></div>
 			<div id="kendrick" class="personal" src="./images/kendrick.jpg"></div>
 			<div id="beach" class="personal" src="./images/beach.jpeg"></div>
@@ -167,11 +185,11 @@
 <section id="skills">
   <div id="skills-background"></div>
   <div class="row" id="skills-info" ng-if="show_skills">
-    <div class="col-md-12 animated fadeIn">
+    <div class="col-md-12 animated fadeIn" ng-class="{fadeOut: skills_fadeout}">
       <h1 style="font-size:50px"><i>Skills</i></h1>
       <hr class="skills-hr">
     </div>
-    <div class="animated fadeIn" id="skills_pics">
+    <div class="animated fadeIn" id="skills_pics" ng-class="{fadeOut: skills_fadeout}">
       <div class="row">
           <img src="./images/htmlcss.png">
           <img src="./images/jquery.png">
