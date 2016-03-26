@@ -411,6 +411,11 @@ header {
 	animation-delay: 1.1s;
 }
 
+#projects-footer{
+	width:100%;
+	position:absolute;
+}
+
 #projects-hr{
 	border-color: #37CDAE;
 	border-style: solid none;
