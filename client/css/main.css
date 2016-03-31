@@ -27,6 +27,7 @@ nav{
 	position:fixed;
 	color:#0146AD;
 	padding-right: 1%;
+	transition: all 0.5s ease;
 }
 
 nav .brand{
@@ -77,6 +78,8 @@ nav .brand{
 	color:#FEC601;
 }
 
+
+
 .navskills .brand{
 	color: #ef8354;
 }
@@ -93,18 +96,21 @@ nav .brand{
 	color: #ef8354;
 }
 
+.navprojects{
+	background-color: #FFFFFF;
+}
 
 .navprojects a{
-	color: #1D263B;
+	color: #06A77D;
 }
 
 .navprojects li .active {
-	background-color: rgb(0, 194, 157);
-	color: #fafafa;
+	background-color: #073B4C;
+	color: #FFFFFF;
 }
 
 .navprojects .brand{
-	color: #1D263B;
+	color: #06A77D;
 }
 
 nav .btn{
@@ -375,20 +381,23 @@ header {
 /*PROJECTS*/
 
 #projects {
-	height:100vh;
+	min-height:165vh;
+	height:auto;
 	width:100vw;
 	position:relative;
+	background-color: rgba(7,59,76,.95);
 }
 
 #projects-background {
 	height:100%;
 	width:100%;
-	background-color: #9eecec;
+	background-color: #073B4C;
+	opacity:.9;
 	position:relative;
 }
 
 #projects-info{
-	color:#1D263B;
+	color:#06A77D;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -402,7 +411,6 @@ header {
 	padding-top:25px;
 	height:auto;
 	width:100%;
-	background: rgba(0, 194, 157,.90);
 	position:absolute;
 	border: 3px solid #FFFFFF;
 	-webkit-animation-duration: 1s;
@@ -412,6 +420,7 @@ header {
 }
 
 #projects-footer{
+	height:50px;
 	width:100%;
 	position:absolute;
 }

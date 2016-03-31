@@ -223,26 +223,19 @@
 </section>
 
 <section id="projects">
+	<div id="projects-background"></div>
   <div class="container" id="projects-info">
 
     <div class="animated fadeIn" id = "projects-header" ng-if="show_projects1">
-      <h1 style="text-align: center; margin-bottom:5%; font-size:50px;"><i>Work</i></h1>
+      <h1 class="white" style="text-align: center; margin-bottom:25px; font-size:50px;"><i>Work</i></h1>
     </div>
 
   <div class="container animated fadeIn" id="projects-info-box" ng-if="show_projects2">
 
 			<div class="row animated fadeIn" id="project1">
-          <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-            <h1 class="project-title">InstaLoud</h1>
-            <p class="project-description">A social media website with the simplicity to <span class="white">share music</span> from <span class="white">SoundCloud</span> to friends and family.</p>
-            <p>
-               Technologies: <span class="white">Python</span>, <span class="white">SQLite3</span>, <span class="white">Django</span>, <span class="white">jQuery</span>, <span class="white">AJAX</span>, <span class="white">MaterializeCSS</span>.
-            </p>
-          </div>
-
-						<div class="col-md-offset-1 col-lg-5 col-md-5 col-sm-12 col-xs-12">
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 								<div class="hovereffect" style="margin-right:10px;">
-										<img class="website" src="./images/instaloud.png" style="border-radius: 20px 5px 20px 5px; height:100%; width:100%">
+										<img class="website img-responsive" src="./images/instaloud.png" style="border-radius: 20px 5px 20px 5px; height:100%; width:100%">
 												<div class="overlay">
 													<h3>
 														<a target = "_blank" href="http://instaloud.kevinsangnguyen.com"><span class="glyphicon glyphicon-play-circle"></span>LIVE DEMO</a>
@@ -252,15 +245,10 @@
 												</div>
 								</div>
 					</div>
-			</div>
-
-			<hr>
-			<!-- 2 -->
-      <div class="row animated fadeIn"id="project2" style="margin:25px 0">
 
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <div class="hovereffect pull-left">
-                  <img class="website" src="./images/rsz_pokemon.png" style="border-radius: 5px 20px 5px 20px;height:100%; width:100%;">
+              <div class="hovereffect">
+                  <img class="website img-responsive" src="./images/rsz_pokemon.png" style="border-radius: 5px 20px 5px 20px;height:100%; width:100%;">
                       <div class="overlay">
                         <h3>
                           <a target = "_blank" href="http://pokemon.kevinsangnguyen.com"><span class="glyphicon glyphicon-play-circle"></span>LIVE DEMO</a>
@@ -271,47 +259,28 @@
               </div>
           </div>
 
-        <div class="col-md-offset-1 col-md-5 col-lg-5 col-sm-12 col-xs-12 pull-right">
-            <h1 class="project-title">Pokemon Socket Simulation</h1>
-            <p class="project-description">A <span class="white">multiplayer(2)</span> javascript built game that mimics the functionality of the original Pokemon game while utilizing <span class="white">sockets</span>.</p>
-            <p>
-              Technologies: <span class="white">JavaScript</span>, <span class="white">MongoDB</span>, <span class="white">Express.js</span>, <span class="white">Angular.js</span>, <span class="white">Node.js</span>, <span class="white">Bootstrap</span>, <span class="white">Sockets.io</span>.
-            </p>
-        </div>
-      </div>
-
-			<hr>
-			<!-- 3 -->
-			<div class="row animated fadeIn" id="project3" style="margin:25px 0; padding-bottom:25px;">
-					<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-						<h1 class="project-title">Stay on Course</h1>
-						<p class="project-description">A <span class="white">job searching organizer</span> with the ability to <span class="white">drag</span> and <span class="white">drop</span> sticky notes or job postings.</p>
-						<p>
-							 Technologies: <span class="white">MongoDB</span>, <span class="white">Express.js</span>, <span class="white">AngularJS</span>, <span class="white">Node.js</span>, <span class="white">passport</span>.
-						</p>
-					</div>
-
-			<div class="col-md-offset-1 col-lg-5 col-md-5 col-sm-12 col-xs-12">
-							<div class="hovereffect" style="margin-right:10px;">
-									<img class="website img-responsiver.j" src="./images/stayoncourse.png" style="border-radius: 20px 5px 20px 5px;height:100%; width:100%;">
-											<div class="overlay">
-												<h3>
-													<a target = "_blank"  href="http://stayoncourse.kevinsangnguyen.com"><span class="glyphicon glyphicon-play-circle"></span>LIVE DEMO</a>
-													&nbsp;&nbsp;&nbsp;
-													<a target = "_blank" href="http://github.com/kevinsangnguyen/stayoncourse"><span class="glyphicon glyphicon-floppy-disk"></span>GITHUB </a>
-												</h3>
-											</div>
-							</div>
-				</div>
 			</div>
 
-			<hr>
+			<div class="row animated fadeIn" id="project2" style="margin:25px 0; padding-bottom:25px;">
+
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+								<div class="hovereffect" style="margin-right:10px;">
+										<img class="website img-responsive" src="./images/stayoncourse.png" style="border-radius: 20px 5px 20px 5px;height:100%; width:100%;">
+												<div class="overlay">
+													<h3>
+														<a target = "_blank"  href="http://stayoncourse.kevinsangnguyen.com"><span class="glyphicon glyphicon-play-circle"></span>LIVE DEMO</a>
+														&nbsp;&nbsp;&nbsp;
+														<a target = "_blank" href="http://github.com/kevinsangnguyen/stayoncourse"><span class="glyphicon glyphicon-floppy-disk"></span>GITHUB </a>
+													</h3>
+												</div>
+								</div>
+					</div>
+			</div>
 
 			<div class="row animated fadeIn" id="project3" style="margin-bottom: 10px; text-align:center;"> <h4 style="position:relative">This <a target="_blank" class="white" href="https://github.com/kevinsangnguyen/Portfolio">Portfolio</a> was built from scratch.</h4>
+			</div>
 
-</div>
-
-<div class="projects-footer pull-right" style="float:bottom;"></div>
+			<div class="projects-footer pull-right" style="float:bottom;"></div>
 </section>
 
 
