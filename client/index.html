@@ -17,6 +17,7 @@
   <script src="./bower_components/angular-scroll/angular-scroll.js"></script>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
   <link rel="stylesheet" href="./bower_components/ui-navbar/css/ui-navbar.css"></script>
   <script src="./bower_components/ui-navbar/release/js/ui-navbar.js"></script>
 	<script type='text/javascript'>
@@ -164,7 +165,7 @@
       <br>
       <div class="animated fadeIn" id="about-info" ng-class="{fadeOut: about_fadeout}">
         <p>My name is <span class="yellow">Kevin</span> and I am a <strong><span class="yellow">Full Stack Web Developer</span></strong>.</p>
-				<p> During these past months, I have dedicated myself towards a new passion: <span class="yellow">coding</span>. As an enthusiast for <span class="yellow">math</span> and <span class="yellow">problem solving</span>, I had a gut feeling that coding would be my calling. My intuition was right, which was evident to me after completing a few computer science courses during college. I followed up on this by applying for a intensive on-site coding boot camp after receiving my Bachelor of Science in Biological Sciences at the University of California, <span class="yellow">Santa Barbara</span> last spring of 2015. Since then, I have spent roughly <span class="yellow">70 hours per week learning, researching, discovering and grinding</span> out anything I can about coding. What I <span class="yellow">love</span> about it the most is that there are endless things to <span class="yellow">learn</span> and never a scarcity of problems to tackle and <span class="yellow">solve</span>.
+				<p> During these past months, I have dedicated myself towards a new passion: <span class="yellow">coding</span>. As an enthusiast for <span class="yellow">math</span> and <span class="yellow">problem solving</span>, I had a gut feeling that coding would be my calling. My intuition was right, which was evident to me after completing a few computer science courses during college. I followed up on this by applying for a intensive on-site coding boot camp after receiving my Bachelor of Science in Biological Sciences at the University of California, <span class="yellow">Santa Barbara</span> last spring of 2015. Since then, I have spent roughly <span class="yellow">75+ hours per week learning, researching, discovering and grinding</span> out anything I can about coding. What I <span class="yellow">love</span> about it the most is that there are endless things to <span class="yellow">learn</span> and never a scarcity of problems to tackle and <span class="yellow">solve</span>.
 				</p>
 				<p>
 					As for specialties, I am adept in anything <span class="yellow">JavaScript</span>, front or back! I am equally proficient in <span class="yellow">Python</span> and <span class="yellow">PHP</span> as I am in JavaScript. My other professional skills can be found in my skills section below. My hope is for this skills section to grow! For I want to learn as much as possible while taking on new challenges during my career.
@@ -191,26 +192,31 @@
     </div>
     <div class="animated fadeIn" id="skills_pics" ng-class="{fadeOut: skills_fadeout}">
 			<div class="row">
-				<img class="hvr-grow" src="./images/mongo-db.png">
-				<img class="hvr-pulse-grow" src="./images/express-js.png">
-				<img class="hvr-bob" src="./images/angular-js.png">
-				<img class="hvr-sink" src="./images/node-js.png">
-				<img class="hvr-hang" src="./images/socketio.png">
-				<img class="hvr-skew" src="./images/react.png">
+				<img class="icon hvr-float" src="./images/svg/javascript.svg">
+				<img class="icon hvr-grow" src="./images/svg/mongodb.svg">
+				<img class="icon hvr-pulse-grow" src="./images/express-js.png">
+				<img class="icon hvr-bob" src="./images/svg/angularjs.svg">
+				<img class="icon hvr-sink" src="./images/svg/nodejs.svg">
+				<img class="icon hvr-hang" src="./images/socketio.png">
+				<img class="icon hvr-skew" src="./images/svg/react.svg">
 			</div>
       <div class="row">
-	      <img class="hvr-buzz" src="./images/bootstrap.png">
-	      <img class="hvr-buzz-out" src="./images/python-programming.png">
-	      <img class="hvr-float" src="./images/flask-python.png">
-	      <img class="hvr-grow-rotate" src="./images/django-framework.png">
+	      <img class="icon hvr-buzz-out" src="./images/svg/python.svg">
+	      <img class="icon hvr-float" src="./images/flask-python.png">
+	      <img class="icon hvr-grow-rotate" src="./images/svg/django.svg">
+				<img class="icon hvr-shrink" src="./images/svg/mysql.svg">
+				<img class="icon hvr-rotate" src="./images/svg/php-plain.svg">
+				<img class="icon hvr-pulse" src="./images/svg/codeigniter.svg">
+				<img class="icon hvr-float" src="./images/svg/cplusplus.svg">
       </div>
 			<div class="row">
-					<img class="hvr-wobble-vertical" src="./images/htmlcss.png">
-					<img class="hvr-wobble-skew" src="./images/jquery.png">
-					<img class="hvr-buzz-out" src="./images/ajax.png">
-					<img class="hvr-shrink" src="./images/mysql.png">
-					<img class="hvr-rotate" src="./images/php-lamp.png">
-					<img class="hvr-pulse" src="./images/codeigniter-lamp.png">
+					<img class="icon hvr-wobble-vertical" src="./images/svg/html5.svg">
+					<img class="icon hvr-wobble-vertical" src="./images/svg/css3.svg">
+					<img class="icon hvr-buzz" src="./images/svg/bootstrap.svg">
+					<img class="icon hvr-wobble-skew" src="./images/svg/jquery.svg">
+					<img class="icon hvr-buzz-out" src="./images/ajax.png">
+					<img class="icon hvr-sink" src="./images/svg/github.svg">
+					<img class="icon hvr-grow" src="./images/svg/amazon.svg">
 			</div>
     </div>
   </div>
@@ -287,7 +293,7 @@
 
 			<div class="col-md-offset-1 col-lg-5 col-md-5 col-sm-12 col-xs-12">
 							<div class="hovereffect" style="margin-right:10px;">
-									<img class="website" src="./images/stayoncourse.png" style="border-radius: 20px 5px 20px 5px;height:100%; width:100%;">
+									<img class="website img-responsiver.j" src="./images/stayoncourse.png" style="border-radius: 20px 5px 20px 5px;height:100%; width:100%;">
 											<div class="overlay">
 												<h3>
 													<a target = "_blank"  href="http://stayoncourse.kevinsangnguyen.com"><span class="glyphicon glyphicon-play-circle"></span>LIVE DEMO</a>
@@ -306,7 +312,6 @@
 </div>
 
 <div class="projects-footer pull-right" style="float:bottom;"></div>
-
 </section>
 
 

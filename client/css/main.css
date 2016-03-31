@@ -3,7 +3,7 @@ body {
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 		background-attachment: fixed;
-		font-family: 'Raleway', sans-serif;
+		font-family: 'Raleway', sans-serif !important;
 		margin: 0;
 		padding: 0;
 		height:100vh;
@@ -268,6 +268,7 @@ header {
 	width:320px;
 	background-size: cover;
 	background-repeat: no-repeat;
+	transition: all 0.5s ease;
 }
 
 #dubs{
@@ -382,7 +383,6 @@ header {
 #projects-background {
 	height:100%;
 	width:100%;
-	opacity:.1;
 	background-color: #9eecec;
 	position:relative;
 }
@@ -402,7 +402,7 @@ header {
 	padding-top:25px;
 	height:auto;
 	width:100%;
-	background: rgba(0, 194, 157,.80);
+	background: rgba(0, 194, 157,.90);
 	position:absolute;
 	border: 3px solid #FFFFFF;
 	-webkit-animation-duration: 1s;
@@ -562,4 +562,9 @@ header {
   filter: alpha(opacity=100);
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
+}
+
+.icon{
+	width:100px;
+	height:100px;
 }
