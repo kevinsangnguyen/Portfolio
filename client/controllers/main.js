@@ -4,7 +4,7 @@ board.controller('Main', function($scope,$location,$routeParams,$timeout,$docume
 	$scope.current_section = "top";
 
 	$scope.scroll_to = function(section){
-		$document.scrollToElementAnimated(document.getElementById(section),0,4000);
+		$document.scrollToElementAnimated(document.getElementById(section),0,4500);
 	}
 
 

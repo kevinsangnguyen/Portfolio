@@ -16,6 +16,11 @@
 	</script>
   <script src="./bower_components/angular-scroll/angular-scroll.js"></script>
 	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="./css/animate.css">
+	<link href="./css/hover.css" rel="stylesheet" media="all">
+ <link rel="stylesheet" href="./css/main.css">
+ <link rel="stylesheet" href="./css/hovereffect.css">
+ <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,400italic,600,600italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
   <link rel="stylesheet" href="./bower_components/ui-navbar/css/ui-navbar.css"></script>
@@ -94,10 +99,6 @@
 
 	</script>
   <script type="text/javascript" src="./controllers/main.js"></script>
-   <link rel="stylesheet" href="./css/animate.css">
-	 <link href="./css/hover.css" rel="stylesheet" media="all">
-  <link rel="stylesheet" href="./css/main.css">
-  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,400italic,600,600italic' rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -155,7 +156,7 @@
 				<a class="hvr-float-shadow" target = "_blank" href="http://github.com/kevinsangnguyen"><img src="./images/github.png" /></a>
 				<a class="hvr-float-shadow" target = "_blank" href="https://www.linkedin.com/in/kevinsangnguyen"><img src="./images/linkedin.png" /></a>
 				<a class="hvr-float-shadow" target =" _blank"
-				href="https://www.dropbox.com/s/c62xgo9nbdrlrdy/resume2016final.pdf?dl=0"><img src="./images/resume.png"></a>
+				href="https://www.dropbox.com/s/g1njjs2d0u4zztr/KevinNguyenResume.pdf?dl=0"><img src="./images/resume.png"></a>
 			</div>
 
     </div>
@@ -223,7 +224,6 @@
 </section>
 
 <section id="projects">
-	<div id="projects-background"></div>
   <div class="container" id="projects-info">
 
     <div class="animated fadeIn" id = "projects-header" ng-if="show_projects1">
@@ -233,54 +233,52 @@
   <div class="container animated fadeIn" id="projects-info-box" ng-if="show_projects2">
 
 			<div class="row animated fadeIn" id="project1">
-					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-								<div class="hovereffect" style="margin-right:10px;">
-										<img class="website img-responsive" src="./images/instaloud.png">
-												<div class="overlay">
-													<h3>
-														<a target = "_blank" href="http://instaloud.kevinsangnguyen.com"><span class="glyphicon glyphicon-play-circle"></span>LIVE DEMO</a>
-														&nbsp;&nbsp;&nbsp;
-														<a target = "_blank" href="http://github.com/kevinsangnguyen/instaloud"><span class="glyphicon glyphicon-floppy-disk"></span>GITHUB </a>
-													</h3>
-												</div>
-								</div>
+
+				<figure class="snip1087 yellow">
+					<img class="img-responsive" src="./images/rsz_kscores.png"/>
+				  <h3>kScores</h3>
+				  <div class="icons">
+						<a href="http://kscores.kevinsangnguyen.com" target="_blank"><i class="ion-ios-world-outline"></i></a>
+						<a href="https://github.com/kevinsangnguyen/kScores" target="_blank"><i class="ion-social-github"></i></a>
 					</div>
+				  <div class="corner"><i class="ion-monitor"></i></div>
+				</figure>
 
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <div class="hovereffect">
-                  <img class="website img-responsive" src="./images/rsz_pokemon.png">
-                      <div class="overlay">
-                        <h3>
-                          <a target = "_blank" href="http://pokemon.kevinsangnguyen.com"><span class="glyphicon glyphicon-play-circle"></span>LIVE DEMO</a>
-                          &nbsp;&nbsp;&nbsp;
-                          <a target = "_blank" href="http://github.com/kevinsangnguyen/pokemon_game"><span class="glyphicon glyphicon-floppy-disk"></span>GITHUB </a>
-                        </h3>
-                      </div>
-              </div>
-          </div>
 
-			</div>
-
-			<div class="row animated fadeIn" id="project2">
-
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-								<div class="hovereffect" style="margin-right:10px;">
-										<img class="website img-responsive" src="./images/stayoncourse.png">
-												<div class="overlay">
-													<h3>
-														<a target = "_blank"  href="http://stayoncourse.kevinsangnguyen.com"><span class="glyphicon glyphicon-play-circle"></span>LIVE DEMO</a>
-														&nbsp;&nbsp;&nbsp;
-														<a target = "_blank" href="http://github.com/kevinsangnguyen/stayoncourse"><span class="glyphicon glyphicon-floppy-disk"></span>GITHUB </a>
-													</h3>
-												</div>
-								</div>
+				<figure class="snip1087 red">
+					<img src="./images/rsz_pokemon.png"/>
+				  <h3>Pokemon Socket Simulation</h3>
+				  <div class="icons">
+						<a href="http://pokemon.kevinsangnguyen.com" target="_blank"><i class="ion-ios-world-outline"></i></a>
+						<a href="https://github.com/kevinsangnguyen/pokemon_game" target="_blank"><i class="ion-social-github"></i></a>
 					</div>
+				  <div class="corner"><i class="ion-monitor"></i></div>
+				</figure>
+
+				<figure class="snip1087 tealish">
+					<img src="./images/rsz_instaloud.png"/>
+				  <h3>Instaloud</h3>
+				  <div class="icons">
+						<a href="http://instaloud.kevinsangnguyen.com" target="_blank"><i class="ion-ios-world-outline"></i></a>
+						<a href="https://github.com/kevinsangnguyen/instaloud" target="_blank"><i class="ion-social-github"></i></a>
+					</div>
+				  <div class="corner"><i class="ion-monitor"></i></div>
+				</figure>
+
+				<figure class="snip1087 blue">
+					<img src="./images/rsz_stayoncourse.png"/>
+				  <h3>Stay on Course</h3>
+				  <div class="icons">
+						<a href="http://stayoncourse.kevinsangnguyen.com" target="_blank"><i class="ion-ios-world-outline"></i></a>
+						<a href="https://github.com/kevinsangnguyen/stayoncourse" target="_blank"><i class="ion-social-github"></i></a>
+					</div>
+				  <div class="corner"><i class="ion-monitor"></i></div>
+				</figure>
 			</div>
 
-			<div class="row animated fadeIn" id="project3" style="padding-bottom: 10px; text-align:center;"> <h4 style="position:relative">This <a target="_blank" class="white" href="https://github.com/kevinsangnguyen/Portfolio">Portfolio</a> was built from scratch.</h4>
 			</div>
+		</div>
 
-			<div class="projects-footer pull-right" style="float:bottom;"></div>
 </section>
 
 

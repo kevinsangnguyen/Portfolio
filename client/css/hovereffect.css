@@ -1,0 +1,168 @@
+@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400);
+figure.snip1087 {
+  font-family: 'Raleway', Arial, sans-serif;
+  display:inline-block;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 525px;
+  max-width: 310px;
+  max-height: 320px;
+  width: 100%;
+  background: #000000;
+  text-align: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 3px solid #FFFFFF;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+}
+figure.snip1087 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+figure.snip1087 img {
+  max-width: 100%;
+  position: relative;
+  top: 0;
+  opacity: 1.0;
+  left: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+figure.snip1087 h3 {
+  position: absolute;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 6px;
+  margin: 0;
+  right: 40px;
+  opacity: 0;
+  bottom: 0;
+  -webkit-transform: translate(10px, 0);
+  transform: translate(10px, 0);
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+figure.snip1087 .icons {
+  bottom: 35px;
+  right: 0;
+  width: 35px;
+  position: absolute;
+  text-align: center;
+}
+figure.snip1087 .icons i {
+  display: inline-block;
+  font-size: 22px;
+  color: #ffffff;
+  left: 0;
+  opacity: 1;
+  position: relative;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transform: translate(35px, -35px);
+  transform: translate(35px, -35px);
+}
+figure.snip1087 .corner {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+figure.snip1087 .icons i,
+figure.snip1087 .corner {
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  background: #262626;
+}
+figure.snip1087 a {
+  opacity: 0.8;
+}
+figure.snip1087 a:hover {
+  opacity: 1;
+}
+figure.snip1087 a:hover i {
+  width: 40px;
+  left: -5px;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+figure.snip1087 a:first-child i {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+figure.snip1087 a:nth-child(2) i {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+figure.snip1087 a:nth-child(3) i {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+figure.snip1087.blue .icons i,
+figure.snip1087.blue .corner {
+  background: #2980b9;
+}
+figure.snip1087.red .icons i,
+figure.snip1087.red .corner {
+  background: #c0392b;
+}
+figure.snip1087.yellow .icons i,
+figure.snip1087.yellow .corner {
+  background: #e67e22;
+}
+
+figure.snip1087.tealish .icons i,
+figure.snip1087.tealish .corner {
+  background: #008080;
+}
+
+figure.snip1087:hover img,
+figure.snip1087.hover img {
+  opacity: 0.5;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+figure.snip1087:hover h3,
+figure.snip1087.hover h3 {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+  opacity: 1;
+}
+figure.snip1087:hover .icons,
+figure.snip1087.hover .icons {
+  opacity: 1;
+}
+figure.snip1087:hover .icons i,
+figure.snip1087.hover .icons i {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  opacity: 1;
+}
+figure.snip1087:hover a:first-child i,
+figure.snip1087.hover a:first-child i {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+figure.snip1087:hover a:nth-child(2) i,
+figure.snip1087.hover a:nth-child(2) i {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+figure.snip1087:hover a:nth-child(3) i,
+figure.snip1087.hover a:nth-child(3) i {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
