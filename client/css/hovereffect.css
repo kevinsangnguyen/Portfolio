@@ -1,15 +1,18 @@
 @import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400);
+
+.figure{
+  display:inline-block;
+}
+
 figure.snip1087 {
   font-family: 'Raleway', Arial, sans-serif;
   display:inline-block;
   position: relative;
   overflow: hidden;
   margin: 10px 1%;
-  min-width: 525px;
-  max-width: 310px;
-  max-height: 320px;
-  width: 100%;
+  height:85%;
+  width:95%;
   background: #000000;
   text-align: left;
   -webkit-box-sizing: border-box;
