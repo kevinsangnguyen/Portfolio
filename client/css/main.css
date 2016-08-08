@@ -250,6 +250,12 @@ header {
 	top:5%;
 }
 
+@media(max-width: 1339px){
+	#personal_pics{
+		display:none;
+	}
+}
+
 #profile-pic{
 	display:inline;
 	border-radius: 5px 20px 5px;
